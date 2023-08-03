@@ -17,9 +17,7 @@ RUN apt-get update \
 # Install Python dependencies
 COPY requirements.txt /app/
 RUN pip install --upgrade pip \
-    && pip install --no-cache-dir -r requirements.txt
-
-# No need to install gunicorn here, as it's installed via requirements.txt
+    && pip install -r requirements.txt
 
 # Copy the Django project into the container
 COPY . /app/
@@ -27,5 +25,5 @@ COPY . /app/
 # Collect static files
 RUN python manage.py collectstatic --noinput
 
-# Use Gunicorn to serve the application
+# Run the Django application using Gunicorn
 CMD ["gunicorn", "beer_api.wsgi:application", "--bind", "0.0.0.0:8000"]
