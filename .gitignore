@@ -1,0 +1,44 @@
+# IDE and Editor Files
+.vscode/
+.idea/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+
+# Dependency and Virtual Environment Files
+venv/
+
+# Log Files
+*.log
+
+# Database Files
+db.sqlite3
+
+# Compiled or Build Files
+*.pyc
+*.class
+*.o
+*.exe
+
+# Media and Static Files
+media/
+static/
+
+# Sensitive Information
+beerapi_keys
+
+# Temporary Files
+*.tmp
+
+# Cache Files
+__pycache__/
+
+# Generated Files
+*.pyc
+*.class
+*.o
+*.exe
+
+# Documentation
+/_build/

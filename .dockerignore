@@ -1,4 +1,5 @@
 .git
+beerapi_keys.pem
 __pycache__
 *.pyc
 *.pyo
